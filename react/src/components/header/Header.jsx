@@ -7,7 +7,7 @@ const Header = () => {
     const { page } = useContext(DataContext);
 
     return (
-        <div>
+        <div className='mainHeader'>
             {page === 'list' &&
                 <h4>LISTADO COMENTARIOS</h4>
             }

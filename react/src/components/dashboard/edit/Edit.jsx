@@ -37,7 +37,7 @@ const Edit = () => {
             <form onSubmit={handleSubmit}>
                 <div className='field'>
                     <label>Nombre:</label>
-                    <input value={form.name} onChange={handleInputChange} name='name' type="text" />
+                    <input maxlength="35" value={form.name} onChange={handleInputChange} name='name' type="text" />
                 </div>
                 <div className='field'>
                     <label>Correo Electrónico:</label>
@@ -45,11 +45,11 @@ const Edit = () => {
                 </div>
                 <div className='field'>
                     <label>Página Web:</label>
-                    <input value={form.web} onChange={handleInputChange} name='web' type="text" />
+                    <input value={form.web} onChange={handleInputChange} name='web' type="url" />
                 </div>
                 <div className='field comment'>
                     <label>Comentario:</label>
-                    <textarea value={form.comment} onChange={handleInputChange} name="comment" rows="5" cols="50"></textarea>
+                    <textarea maxlength="100" value={form.comment} onChange={handleInputChange} name="comment" rows="5" cols="50"></textarea>
                 </div>
                 <div>
                     <button type="submit">Guardar</button>

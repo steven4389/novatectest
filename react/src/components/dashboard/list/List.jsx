@@ -1,18 +1,18 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../../context/DataContext';
 import { list, filter } from '../../../data/Data'
 import './list.scss'
 
 const List = () => {
 
-    const { setItemToEdit,  setPage, search} = useContext(DataContext);
+    const { setItemToEdit, setPage, search } = useContext(DataContext);
     const [commentList, setCommentList] = useState([]);
-    
-    useEffect(()=>{
-        search !== ''? setCommentList(filter(search)) :setCommentList(list()) 
+
+    useEffect(() => {
+        search !== '' ? setCommentList(filter(search)) : setCommentList(list())
     }, [search])
 
-    const editComment = (item)=>{
+    const editComment = (item) => {
         setItemToEdit(item);
         setPage('edit');
     }
@@ -32,7 +32,9 @@ const List = () => {
                             <td>{item.name}</td>
                             <td>{item.email}</td>
                             <td>{item.web !== '' ? item.web : 'N/D'}</td>
-                            <td onClick={() => editComment(item)}>Editar</td>
+                            <td className='edit' onClick={() => editComment(item)}>
+                                <div className='editButton'>Editar</div>
+                            </td>
                         </tr>)
                     })
                 }

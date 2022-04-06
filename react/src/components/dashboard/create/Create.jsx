@@ -34,7 +34,7 @@ const Create = () => {
             <form onSubmit={handleSubmit}>
                 <div className='field'>
                     <label>Nombre:</label>
-                    <input onChange={handleInputChange} name='name' type="text" />
+                    <input maxlength="35"  onChange={handleInputChange} name='name' type="text" />
                 </div>
                 <div className='field'>
                     <label>Correo Electrónico:</label>
@@ -42,11 +42,11 @@ const Create = () => {
                 </div>
                 <div className='field'>
                     <label>Página Web:</label>
-                    <input onChange={handleInputChange} name='web' type="text" />
+                    <input  onChange={handleInputChange} name='web' type="url" />
                 </div>
                 <div className='field comment'>
                     <label>Comentario:</label>
-                    <textarea onChange={handleInputChange} name="comment" rows="5" cols="50"></textarea>
+                    <textarea maxlength="100" onChange={handleInputChange} name="comment" rows="5" cols="50"></textarea>
                 </div>
                 <div>
                     <button type="submit">Guardar</button>

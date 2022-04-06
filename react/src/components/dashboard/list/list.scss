@@ -1,6 +1,40 @@
-.listMain{
-    width: 100%;
-    display: flex;
+.listMain {
+    width          : 100%;
+    display        : flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top     : 50px;
+
+    td {
+        width     : 300px;
+        text-align: start;
+        padding: 5px;
+        border-bottom: 1px solid rgb(233, 230, 230);
+    }
+
+    th {
+        text-align: start;
+    }
+
+    th:nth-child(4){
+        text-align:center;
+    }
+
+    .edit {
+        display: flex;
+        justify-content: center;
+    }
+
+    .editButton {
+        width           : 100px;
+        color           : #fff;
+        background-color: rgb(33, 134, 216);
+        cursor          : pointer;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .editButton:hover {
+        background-color: rgb(22, 113, 189);
+    }
+
 }
